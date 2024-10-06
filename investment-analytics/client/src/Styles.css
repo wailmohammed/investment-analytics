@@ -1,0 +1,65 @@
+/* src/styles.css */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --success-color: #2ecc71;
+    --text-color: #333;
+    --background-color: #fff;
+    --error-color: #e74c3c;
+    --border-radius: 5px;
+    --transition-speed: 0.3s;
+}
+
+body.dark-mode {
+    --primary-color: #34495e;
+    --secondary-color: #2980b9;
+    --success-color: #27ae60;
+    --text-color: #ecf0f1;
+    --background-color: #2c3e50;
+    --error-color: #c0392b;
+}
+
+/* ... rest of your existing CSS ... */
+
+/* Dark mode specific styles */
+body.dark-mode .dashboard-card,
+body.dark-mode .analysis-card {
+    background-color: #34495e;
+    color: var(--text-color);
+}
+
+body.dark-mode .portfolio-table th {
+    background-color: var(--primary-color);
+}
+
+body.dark-mode .portfolio-table td {
+    border-color: #4a6278;
+}
+
+.dark-mode-toggle {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Add this to ensure main content fills the screen */
+.main-content {
+    min-height: calc(100vh - 60px - 50px); /* Adjust based on your header and footer heights */
+    padding: 20px;
+}
+
+/* Style for the footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 10px 0;
+}
